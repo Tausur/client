@@ -12,7 +12,7 @@ const Contact = () => {
 
   const handleClick = async ()=>{
     try {
-      await axios.post("https://client-virid-six.vercel.app//api/postContact",{name,email,message})
+      await axios.post("https://client-virid-six.vercel.app/api/postContact",{name,email,message})
       toast("Feedback send successfully!");
     } catch (error) {
       console.log(error)
