@@ -14,4 +14,12 @@ export default async function handler(req, res) {
       res.status(404).json(error)
     }
   }
+  if(method === "GET"){
+    try {
+      const user = await contact.find()
+      res.status(200).json(user)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 }
