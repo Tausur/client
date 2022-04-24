@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import { useState } from 'react'
-import { AiOutlineSearch } from 'react-icons/ai';
 
 const LandingPage = () => {
 
@@ -13,7 +12,7 @@ const LandingPage = () => {
           <h1 className="text-3xl text-indigo-500 tracking-widest font-medium title-font mb-16 mt-10">Client Satellite</h1>
           <div className='flex justify-center'>
             <input value={search} onChange={(e) => setSearch(e.target.value)} type="text" id="search" name="search" className="bg-white rounded-3xl w-96 border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out mb-12" placeholder='Search here any blog'/>
-            <AiOutlineSearch className='text-2xl justify-center mt-2 ml-2'/>
+        
           </div>
         </div>
       </div>
