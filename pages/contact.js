@@ -10,9 +10,16 @@ const Contact = () => {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
 
-  const handleClick = async ()=>{
+  const handleClick = async (event)=>{
+    event.preventDefault()
     try {
-      await axios.post("https://client-virid-six.vercel.app/api/postContact",{name,email,message})
+      const res = await fetch('/api/postContact',{
+        method: "POST",
+        body: JSON.stringify({name,email,message}),
+        headers:{
+          'Content-Type':"application/json"
+        }
+      })
       toast("Feedback send successfully!");
     } catch (error) {
       console.log(error)
