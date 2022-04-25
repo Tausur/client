@@ -13,17 +13,20 @@ const Contact = () => {
   const handleClick = async (event)=>{
     event.preventDefault()
     try {
-       const res = await fetch('http://localhost:3000/api/postContact',{
+       const res = await fetch('https://client-virid-six.vercel.app/api/postContact',{
         method: "POST",
         body: JSON.stringify({name,email,message}),
         headers:{
           'Content-Type':"application/json"
         }
       }).then(res=>{
-        return res.json()
+        if(res.ok){
+          toast("Feedback send successfully!");
+        }
+        else{
+          console.log("not success")
+        }
       })
-      .then(data=> console.log(data))
-      .catch(error=> console.error(error))
     } catch (error) {
       console.log(error)
     }
