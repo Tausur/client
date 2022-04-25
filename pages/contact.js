@@ -13,7 +13,7 @@ const Contact = () => {
   const handleClick = async (event)=>{
     event.preventDefault()
     try {
-      const res = await fetch("/api/postContact",{
+      const res = await fetch("https://client-virid-six.vercel.app/api/postContact",{
         method: "POST",
         body: JSON.stringify({name,email,message}),
         headers:{
