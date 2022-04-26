@@ -10,7 +10,7 @@ const Contact = () => {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
 
-  const handleSubmit = async (e)=>{
+  const handleClick = async (e)=>{
     e.preventDefault()
     var url = "https://chart.googleapis.com/chart";
     try {
@@ -67,7 +67,7 @@ const Contact = () => {
             <label htmlFor="message" className="leading-7 text-sm text-gray-600">Message</label>
             <textarea value={message} onChange={(e)=>setMessage(e.target.value)} id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
           </div>
-          <button onSubmit={(e)=>handleSubmit} className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+          <button onClick={(e)=>handleSubmit} className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
           <p className="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
         </div>
       </div>
