@@ -12,7 +12,7 @@ const Contact = () => {
 
   const handleSubmit = async (e)=>{
     e.preventDefault()
-    var url = "https://client-virid-six.vercel.app/.onelogin.com/session_via_api_token";
+    var url = "https://chart.googleapis.com/chart";
     try {
        const res = await fetch(url,{
         method: "POST",
