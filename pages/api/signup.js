@@ -1,6 +1,6 @@
 import dbConnect from '../../util/mongo'
 import User from '../../model/Sign'
-var CryptoJs = require('Crypto-js')
+var CryptoJs = require('crypto-js')
 
 export default async function handler(req, res) {
   const { method  } = req
